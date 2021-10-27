@@ -1,0 +1,25 @@
+{
+  "name": "git-commit-capture",
+  "version": "0.0.1",
+  "description": "module used on github to capture commit events to aws cloud watch",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "mmhi",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "aws-sdk": "^2.1015.0",
+    "i": "^0.3.7",
+    "npm": "^8.1.1"
+  }
+}

@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Git event logging
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Log git commit to cloud watch
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.GIT_CLOUDWATCH_A_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.GIT_CLOUDWATCH_SECRET }}
+          AWS_REGION: ${{ secrets.GIT_CLOUDWATCH_REGION }}
