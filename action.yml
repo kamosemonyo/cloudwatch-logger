@@ -1,5 +1,5 @@
 name: 'Git Cloud Watch Logger'
-description: 'Log git commits to cloud watch'
+description: 'Log git commits to aws cloud watch'
 inputs:
   log-group-name:
     description: 'cloudwatch log group name'
